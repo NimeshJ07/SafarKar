@@ -1,0 +1,701 @@
+[
+  {
+    "stations-names": [
+      "Churchgate",
+      "Marine Lines",
+      "Charni Road",
+      "Grant Road",
+      "Mumbai Central",
+      "Mahalakshmi",
+      "Lower Parel",
+      "Prabhadevi",
+      "Dadar",
+      "Matunga Road",
+      "Mahim Jn",
+      "Bandra",
+      "Khar Road",
+      "Santacruz",
+      "Vile Parle",
+      "Andheri",
+      "Jogeshwari",
+      "Ram Mandir",
+      "Goregaon",
+      "Malad",
+      "Kandivali",
+      "Borivali",
+      "Dahisar",
+      "Mira Road",
+      "Bhayander",
+      "Naigaon",
+      "Vasai Road",
+      "Nalla Sopara",
+      "Virar",
+      "Vaitarna",
+      "Saphale",
+      "Kelve Road",
+      "Palghar",
+      "Umroli Road",
+      "Boisar",
+      "Vangaon",
+      "Dahanu Road",
+      "CSMT",
+      "Masjid",
+      "Sandhurst Road",
+      "Byculla",
+      "Chinchpokli",
+      "Currey Road",
+      "Parel",
+      "Matunga",
+      "Sion",
+      "Kurla",
+      "Vidhyavihar",
+      "Ghatkopar",
+      "Vikhroli",
+      "Kanjur Marg",
+      "Bhandup",
+      "Nahur",
+      "Mulund",
+      "Thane",
+      "Kalva",
+      "Mumbra",
+      "Diva Jn",
+      "Kopar",
+      "Dombivli",
+      "Thakurli",
+      "Kalyan",
+      "Vithalwadi",
+      "Ulhas Nagar",
+      "Ambernath",
+      "Badalpur",
+      "Vangani",
+      "Shelu",
+      "Neral",
+      "Bhivpuri Road",
+      "Karjat",
+      "Palasdhari",
+      "Kelavli",
+      "Dolavli",
+      "Lowjee",
+      "Khopoli",
+      "CSMT",
+      "Masjid",
+      "Sandhurst Road",
+      "Byculla",
+      "Chinchpokli",
+      "Currey Road",
+      "Parel",
+      "Matunga",
+      "Sion",
+      "Kurla",
+      "Vidhyavihar",
+      "Ghatkopar",
+      "Vikhroli",
+      "Kanjur Marg",
+      "Bhandup",
+      "Nahur",
+      "Mulund",
+      "Thane",
+      "Kalva",
+      "Mumbra",
+      "Diva Jn",
+      "Kopar",
+      "Dombivli",
+      "Thakurli",
+      "Kalyan",
+      "Shahad",
+      "Ambivli",
+      "Titwala",
+      "Khadavli",
+      "Vasind",
+      "Asangaon",
+      "Atagaon",
+      "Thansit",
+      "Khardi",
+      "Umbermali",
+      "Kasara",
+      "CSMT",
+      "Masjid",
+      "Sandhurst Road",
+      "Dockyarad Road",
+      "Reay Road",
+      "Cotton Green",
+      "Sewri",
+      "Vadala Road",
+      "GTB Nagar",
+      "Chunabhatti",
+      "Kurla",
+      "Tilaknagar",
+      "Chembur",
+      "Govandi",
+      "Mankhurd",
+      "Vashi",
+      "Sanpada",
+      "Juinagar",
+      "Nerul",
+      "Seawood Darave",
+      "Belapur CBD",
+      "Kharghar",
+      "Mansarovar",
+      "Khandeshwar",
+      "Panvel",
+      "Thane",
+      "Airoli",
+      "Rabale",
+      "Ghansoli",
+      "Koparkhairane",
+      "Turbhe",
+      "Juinagar",
+      "Nerul",
+      "Seawood Darave",
+      "Belapur CBD",
+      "Kharghar",
+      "Mansarovar",
+      "Khandeshwar",
+      "Panvel",
+      "Nerul",
+      "Seawood Darave",
+      "Belapur CBD",
+      "Bamandongri",
+      "Kharkopar",
+      "Diva Jn",
+      "Dativali",
+      "Nilje",
+      "Taloja Panchanand",
+      "Navade Road",
+      "Kalamboli",
+      "Panvel",
+      "Somtane",
+      "Rasayani",
+      "Apta",
+      "Jite",
+      "Hamarapur",
+      "Pen",
+      "Kasu",
+      "Nagothane",
+      "Nidi",
+      "Roha",
+      "Dahanu Road",
+      "Vangaon",
+      "Boisar",
+      "Umroli Road",
+      "Palghar",
+      "Kelva Road",
+      "Saphale",
+      "Vaitarna",
+      "Virar",
+      "Nalla Sopara",
+      "Vasai Road",
+      "Juchandra Road",
+      "Kaman Road",
+      "Kharbao",
+      "Bhiwandi Road",
+      "Kopar",
+      "Dativali",
+      "Nilje",
+      "Taloja Panchanand",
+      "Navade Road",
+      "Kalamboli",
+      "Panvel",
+      "Neral",
+      "Jumapatti",
+      "Waterpipe",
+      "Aman Lodge",
+      "Matheran"
+    ]
+  },  
+  {
+    "Station": "Churchgate",
+    "Line": ["Western"],
+    "Distance From Previous of the Line": 0
+  },
+  {
+    "Station": "Marine Lines",
+    "Line": ["Western"],
+    "Distance From Previous of the Line": 1
+  },
+  {
+    "Station": "Charni Road",
+    "Line": ["Western"],
+    "Distance From Previous of the Line": 1
+  },
+  {
+    "Station": "Grant Road",
+    "Line": ["Western"],
+    "Distance From Previous of the Line": 1
+  },
+  {
+    "Station": "Mumbai Central",
+    "Line": ["Western"],
+    "Distance From Previous of the Line": 1
+  },
+  {
+    "Station": "Mahalakshmi",
+    "Line": ["Western"],
+    "Distance From Previous of the Line": 1
+  },
+  {
+    "Station": "Lower Parel",
+    "Line": ["Western"],
+    "Distance From Previous of the Line": 2
+  },
+  {
+    "Station": "Prabhadevi",
+    "Line": ["Western"],
+    "Distance From Previous of the Line": 1
+  },
+  {
+    "Station": "Dadar",
+    "Line": ["Western"],
+    "Distance From Previous of the Line": 1
+  },
+  {
+    "Station": "Matunga Road",
+    "Line": ["Western"],
+    "Distance From Previous of the Line": 2
+  },
+  {
+    "Station": "Mahim Jn",
+    "Line": ["Western"],
+    "Distance From Previous of the Line": 1
+  },
+  {
+    "Station": "Bandra",
+    "Line": ["Western"],
+    "Distance From Previous of the Line": 2
+  },
+  {
+    "Station": "Khar Road",
+    "Line": ["Western"],
+    "Distance From Previous of the Line": 2
+  },
+  {
+    "Station": "Santacruz",
+    "Line": ["Western"],
+    "Distance From Previous of the Line": 1
+  },
+  {
+    "Station": "Vile Parle",
+    "Line": ["Western"],
+    "Distance From Previous of the Line": 2
+  },
+  {
+    "Station": "Andheri",
+    "Line": ["Western"],
+    "Distance From Previous of the Line": 2
+  },
+  {
+    "Station": "Jogeshwari",
+    "Line": ["Western"],
+    "Distance From Previous of the Line": 2
+  },
+  {
+    "Station": "Ram Mandir",
+    "Line": ["Western"],
+    "Distance From Previous of the Line": 2
+  },
+  {
+    "Station": "Goregaon",
+    "Line": ["Western"],
+    "Distance From Previous of the Line": 3
+  },
+  {
+    "Station": "Malad",
+    "Line": ["Western"],
+    "Distance From Previous of the Line": 2
+  },
+  {
+    "Station": "Kandivali",
+    "Line": ["Western"],
+    "Distance From Previous of the Line": 1
+  },
+  {
+    "Station": "Borivali",
+    "Line": ["Western"],
+    "Distance From Previous of the Line": 3
+  },
+  {
+    "Station": "Dahisar",
+    "Line": ["Western"],
+    "Distance From Previous of the Line": 2
+  },
+  {
+    "Station": "Mira Road",
+    "Line": ["Western"],
+    "Distance From Previous of the Line": 3
+  },
+  {
+    "Station": "Bhayander",
+    "Line": ["Western"],
+    "Distance From Previous of the Line": 3
+  },
+  {
+    "Station": "Naigaon",
+    "Line": ["Western"],
+    "Distance From Previous of the Line": 6
+  },
+  {
+    "Station": "Vasai Road",
+    "Line": ["Western"],
+    "Distance From Previous of the Line": 4
+  },
+  {
+    "Station": "Nalla Sopara",
+    "Line": ["Western"],
+    "Distance From Previous of the Line": 4
+  },
+  {
+    "Station": "Virar",
+    "Line": ["Western"],
+    "Distance From Previous of the Line": 4
+  },
+  {
+    "Station": "Vaitarna",
+    "Line": ["Western"],
+    "Distance From Previous of the Line": 8
+  },
+  {
+    "Station": "Saphale",
+    "Line": ["Western"],
+    "Distance From Previous of the Line": 8
+  },
+  {
+    "Station": "Kelve Road",
+    "Line": ["Western"],
+    "Distance From Previous of the Line": 6
+  },
+  {
+    "Station": "Palghar",
+    "Line": ["Western"],
+    "Distance From Previous of the Line": 8
+  },
+  {
+    "Station": "Umroli Road",
+    "Line": ["Western"],
+    "Distance From Previous of the Line": 6
+  },
+  {
+    "Station": "Boisar",
+    "Line": ["Western"],
+    "Distance From Previous of the Line": 6
+  },
+  {
+    "Station": "Vangaon",
+    "Line": ["Western"],
+    "Distance From Previous of the Line": 9
+  },
+  {
+    "Station": "Dahanu Road",
+    "Line": ["Western"],
+    "Distance From Previous of the Line": 12
+  },
+  {
+    "Station": "CSMT",
+    "Line": ["Central", "Harbour"],
+    "Distance From Previous of the Line": 0
+  },
+  {
+    "Station": "Masjid",
+    "Line": ["Central", "Harbour"],
+    "Distance From Previous of the Line": 1
+  },
+  {
+    "Station": "Sandhurst Road",
+    "Line": ["Central", "Harbour"],
+    "Distance From Previous of the Line": 1
+  },
+  {
+    "Station": "Byculla",
+    "Line": ["Central"],
+    "Distance From Previous of the Line": 2
+  },
+  {
+    "Station": "Chinchpokli",
+    "Line": ["Central"],
+    "Distance From Previous of the Line": 1
+  },
+  {
+    "Station": "Currey Road",
+    "Line": ["Central"],
+    "Distance From Previous of the Line": 1
+  },
+  {
+    "Station": "Parel",
+    "Line": ["Central"],
+    "Distance From Previous of the Line": 2
+  },
+  {
+    "Station": "Dadar",
+    "Line": ["Western", "Central"],
+    "Distance From Previous of the Line": 1
+  },
+  {
+    "Station": "Matunga",
+    "Line": ["Central"],
+    "Distance From Previous of the Line": 1
+  },
+  {
+    "Station": "Sion",
+    "Line": ["Central"],
+    "Distance From Previous of the Line": 1
+  },
+  {
+    "Station": "Kurla",
+    "Line": ["Central", "Harbour"],
+    "Distance From Previous of the Line": 1
+  },
+  {
+    "Station": "Vidhyavihar",
+    "Line": ["Central"],
+    "Distance From Previous of the Line": 2
+  },
+  {
+    "Station": "Ghatkopar",
+    "Line": ["Central"],
+    "Distance From Previous of the Line": 2
+  },
+  {
+    "Station": "Vikhroli",
+    "Line": ["Central"],
+    "Distance From Previous of the Line": 4
+  },
+  {
+    "Station": "Kanjur Marg",
+    "Line": ["Central"],
+    "Distance From Previous of the Line": 2
+  },
+  {
+    "Station": "Bhandup",
+    "Line": ["Central"],
+    "Distance From Previous of the Line": 2
+  },
+  {
+    "Station": "Nahur",
+    "Line": ["Central"],
+    "Distance From Previous of the Line": 1
+  },
+  {
+    "Station": "Mulund",
+    "Line": ["Central"],
+    "Distance From Previous of the Line": 2
+  },
+  {
+    "Station": "Thane",
+    "Line": ["Central"],
+    "Distance From Previous of the Line": 2
+  },
+  {
+    "Station": "Kalva",
+    "Line": ["Central"],
+    "Distance From Previous of the Line": 2
+  },
+  {
+    "Station": "Mumbra",
+    "Line": ["Central"],
+    "Distance From Previous of the Line": 3
+  },
+  {
+    "Station": "Diva Jn",
+    "Line": ["Central"],
+    "Distance From Previous of the Line": 3
+  },
+  {
+    "Station": "Kopar",
+    "Line": ["Central"],
+    "Distance From Previous of the Line": 4
+  },
+  {
+    "Station": "Dombivli",
+    "Line": ["Central"],
+    "Distance From Previous of the Line": 1
+  },
+  {
+    "Station": "Thakurli",
+    "Line": ["Central"],
+    "Distance From Previous of the Line": 1
+  },
+  {
+    "Station": "Kalyan",
+    "Line": ["Central"],
+    "Distance From Previous of the Line": 3
+  },
+  {
+    "Station": "Vithalwadi",
+    "Line": ["Central"],
+    "Distance From Previous of the Line": 2
+  },
+  {
+    "Station": "Ulhas Nagar",
+    "Line": ["Central"],
+    "Distance From Previous of the Line": 1
+  },
+  {
+    "Station": "Ambernath",
+    "Line": ["Central"],
+    "Distance From Previous of the Line": 3
+  },
+  {
+    "Station": "Badalpur",
+    "Line": ["Central"],
+    "Distance From Previous of the Line": 7
+  },
+  {
+    "Station": "Vangani",
+    "Line": ["Central"],
+    "Distance From Previous of the Line": 11
+  },
+  {
+    "Station": "Shelu",
+    "Line": ["Central"],
+    "Distance From Previous of the Line": 4
+  },
+  {
+    "Station": "Neral",
+    "Line": ["Central"],
+    "Distance From Previous of the Line": 4
+  },
+  {
+    "Station": "Bhivpuri Road",
+    "Line": ["Central"],
+    "Distance From Previous of the Line": 7
+  },
+  {
+    "Station": "Karjat",
+    "Line": ["Central"],
+    "Distance From Previous of the Line": 7
+  },
+  {
+    "Station": "Palasdhari",
+    "Line": ["Central"],
+    "Distance From Previous of the Line": 3
+  },
+  {
+    "Station": "Kelavli",
+    "Line": ["Central"],
+    "Distance From Previous of the Line": 5
+  },
+  {
+    "Station": "Dolavli",
+    "Line": ["Central"],
+    "Distance From Previous of the Line": 1
+  },
+  {
+    "Station": "Lowjee",
+    "Line": ["Central"],
+    "Distance From Previous of the Line": 3
+  },
+  {
+    "Station": "Khopoli",
+    "Line": ["Central"],
+    "Distance From Previous of the Line": 3
+  },
+  {
+    "Station": "Dockyarad Road",
+    "Line": ["Harbour"],
+    "Distance From Previous of the Line": 2
+  },
+  {
+    "Station": "Reay Road",
+    "Line": ["Harbour"],
+    "Distance From Previous of the Line": 1
+  },
+  {
+    "Station": "Cotton Green",
+    "Line": ["Harbour"],
+    "Distance From Previous of the Line": 1
+  },
+  {
+    "Station": "Sewri",
+    "Line": ["Harbour"],
+    "Distance From Previous of the Line": 1
+  },
+  {
+    "Station": "Vadala Road",
+    "Line": ["Harbour"],
+    "Distance From Previous of the Line": 2
+  },
+  {
+    "Station": "GTB Nagar",
+    "Line": ["Harbour"],
+    "Distance From Previous of the Line": 2
+  },
+  {
+    "Station": "Chunabhatti",
+    "Line": ["Harbour"],
+    "Distance From Previous of the Line": 2
+  },
+  {
+    "Station": "Kurla",
+    "Line": ["Central", "Harbour"],
+    "Distance From Previous of the Line": 2
+  },
+  {
+    "Station": "Tilaknagar",
+    "Line": ["Harbour"],
+    "Distance From Previous of the Line": 2
+  },
+  {
+    "Station": "Chembur",
+    "Line": ["Harbour"],
+    "Distance From Previous of the Line": 1
+  },
+  {
+    "Station": "Govandi",
+    "Line": ["Harbour"],
+    "Distance From Previous of the Line": 3
+  },
+  {
+    "Station": "Mankhurd",
+    "Line": ["Harbour"],
+    "Distance From Previous of the Line": 3
+  },
+  {
+    "Station": "Vashi",
+    "Line": ["Harbour"],
+    "Distance From Previous of the Line": 8
+  },
+  {
+    "Station": "Sanpada",
+    "Line": ["Harbour"],
+    "Distance From Previous of the Line": 3
+  },
+  {
+    "Station": "Juinagar",
+    "Line": ["Harbour"],
+    "Distance From Previous of the Line": 5
+  },
+  {
+    "Station": "Nerul",
+    "Line": ["Harbour"],
+    "Distance From Previous of the Line": 3
+  },
+  {
+    "Station": "Seawood Darave",
+    "Line": ["Harbour"],
+    "Distance From Previous of the Line": 3
+  },
+  {
+    "Station": "Belapur CBD",
+    "Line": ["Harbour"],
+    "Distance From Previous of the Line": 4
+  },
+  {
+    "Station": "Kharghar",
+    "Line": ["Harbour"],
+    "Distance From Previous of the Line": 4
+  },
+  {
+    "Station": "Mansarovar",
+    "Line": ["Harbour"],
+    "Distance From Previous of the Line": 3
+  },
+  {
+    "Station": "Khandeshwar",
+    "Line": ["Harbour"],
+    "Distance From Previous of the Line": 3
+  },
+  {
+    "Station": "Panvel",
+    "Line": ["Harbour"],
+    "Distance From Previous of the Line": 3
+  }
+]
