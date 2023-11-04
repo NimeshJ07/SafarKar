@@ -21,7 +21,7 @@ class _MyHomePageState extends State<MyHomePage> {
   late Web3Client ethClient;
   String privAddress = "";
   EthereumAddress targetAddress =
-      EthereumAddress.fromHex("0x8c6020cb45b1171ccd4D7b659d3C894d3de4091e");
+      EthereumAddress.fromHex("RECEIVER WALLET ADDRESS");
   bool? created;
   var balance;
   var credentials;
@@ -45,7 +45,7 @@ class _MyHomePageState extends State<MyHomePage> {
     super.initState();
     httpClient = Client();
     ethClient = Web3Client(
-        "https://sepolia.infura.io/v3/5f09ac647f234f9f9cad15567099b351",
+        "https://sepolia.infura.io/v3/PROJECT_API_KEY",
         httpClient);
     details();
   }
@@ -71,7 +71,7 @@ class _MyHomePageState extends State<MyHomePage> {
 
   Future<DeployedContract> loadContract() async {
     String abi = await rootBundle.loadString("assets/abi/abi.json");
-    String contractAddress = "0x2e5d7B1670937Bc7dB54E05De309a317A03B610b";
+    String contractAddress = "CONTRACT ADDRESS";
     final contract = DeployedContract(ContractAbi.fromJson(abi, "WalletToken"),
         EthereumAddress.fromHex(contractAddress));
     return contract;
