@@ -1,12 +1,16 @@
+import 'dart:ffi';
 import 'dart:math';
 
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:provider/provider.dart';
 import 'package:wallet/pages/createWallet.dart';
 import 'package:web3dart/web3dart.dart';
 import 'package:http/http.dart';
 import 'package:flutter/services.dart';
 import 'package:wallet/utilities/firestore.dart';
+
+import 'package:wallet/utilities/sign_in_page.dart';
 
 class MyHomePage extends StatefulWidget {
   const MyHomePage({Key? key, required this.title}) : super(key: key);
@@ -21,11 +25,11 @@ class _MyHomePageState extends State<MyHomePage> {
   late Web3Client ethClient;
   String privAddress = "";
   EthereumAddress targetAddress =
-      EthereumAddress.fromHex("RECEIVER WALLET ADDRESS");
+      EthereumAddress.fromHex("0x40c0F5117CA3D2C44800Fa34fec192271dCb3Bed");
   bool? created;
   var balance;
   var credentials;
-  int myAmount = 2;
+  int myAmount = 4;
   var pro_pic;
   var u_name;
 
@@ -45,7 +49,7 @@ class _MyHomePageState extends State<MyHomePage> {
     super.initState();
     httpClient = Client();
     ethClient = Web3Client(
-        "https://sepolia.infura.io/v3/PROJECT_API_KEY",
+        "https://sepolia.infura.io/v3/4b2e7550998b47809ef8843eafc85e15",
         httpClient);
     details();
   }
@@ -65,14 +69,16 @@ class _MyHomePageState extends State<MyHomePage> {
             // print(wallet.toJson());
             created = data['wallet_created'];
             balance = getBalance(credentials);
+            print(publicAdress);
           })
         : print("Data is NULL!");
   }
 
   Future<DeployedContract> loadContract() async {
     String abi = await rootBundle.loadString("assets/abi/abi.json");
-    String contractAddress = "CONTRACT ADDRESS";
-    final contract = DeployedContract(ContractAbi.fromJson(abi, "WalletToken"),
+
+    String contractAddress = "0xf076201068e30D41d6551CbD2De7020eB0A0e1c0";
+    final contract = DeployedContract(ContractAbi.fromJson(abi, "Rail2Connect"),
         EthereumAddress.fromHex(contractAddress));
     return contract;
   }
@@ -89,8 +95,9 @@ class _MyHomePageState extends State<MyHomePage> {
     List<dynamic> result = await query("balanceOf", [credentialAddress]);
     var data = result[0];
     setState(() {
-      balance = data;
+      balance = BigInt.parse(data.toString());
     });
+    ;
   }
 
   Future<String> sendCoin() async {
@@ -98,8 +105,10 @@ class _MyHomePageState extends State<MyHomePage> {
     // var response = await submit("transfer", [targetAddress, bigAmount]);
     // print(response);
     // return response;
-    var bigAmount = BigInt.from(myAmount * 1000000000000000000);
+    var bigAmount = BigInt.from(myAmount) * BigInt.from(10).pow(18);
+    ;
     var response = await submit("transfer", [targetAddress, bigAmount]);
+    print("TRANSACTION ID: ");
     print(response);
     return response;
   }
@@ -121,7 +130,8 @@ class _MyHomePageState extends State<MyHomePage> {
 
   Future<void> _confirmPayment() async {
     print("TOTAL AMOUNT TO BE SEND : $myAmount");
-    if (balance == null || balance < BigInt.from(myAmount)) {
+    var bigAmount1 = BigInt.from(myAmount) * BigInt.from(10).pow(18);
+    if (balance == null || balance < bigAmount1) {
       return showDialog<void>(
         context: context,
         builder: (BuildContext context) {
@@ -155,7 +165,7 @@ class _MyHomePageState extends State<MyHomePage> {
             content: SingleChildScrollView(
               child: ListBody(
                 children: <Widget>[
-                  Text('Are you sure you want to send money?'),
+                  Text('Are you sure you want to buy ticket?'),
                 ],
               ),
             ),
@@ -207,6 +217,127 @@ class _MyHomePageState extends State<MyHomePage> {
     );
   }
 
+// NEW SHARING TOKEN CODE
+  Future<void> _shareTokensDialog() async {
+    TextEditingController addressController = TextEditingController();
+    TextEditingController amountController = TextEditingController();
+
+    return showDialog<void>(
+      context: context,
+      builder: (BuildContext context) {
+        return AlertDialog(
+          title: Text('Share Tokens'),
+          content: Column(
+            children: <Widget>[
+              TextField(
+                controller: addressController,
+                decoration: InputDecoration(labelText: 'Wallet Address'),
+              ),
+              TextField(
+                controller: amountController,
+                keyboardType: TextInputType.number,
+                decoration: InputDecoration(labelText: 'Amount'),
+              ),
+            ],
+          ),
+          actions: <Widget>[
+            TextButton(
+              child: Text('Cancel'),
+              onPressed: () {
+                Navigator.of(context).pop();
+              },
+            ),
+            TextButton(
+              child: Text('Share Tokens'),
+              onPressed: () async {
+                String address = addressController.text;
+                int amount = int.tryParse(amountController.text) ?? 0;
+                if (amount > 0 && address.isNotEmpty) {
+                  Navigator.of(context).pop();
+                  await _confirmShareTokens(address, amount);
+                }
+              },
+            ),
+          ],
+        );
+      },
+    );
+  }
+
+  Future<void> _confirmShareTokens(String address, int amount) async {
+    var bigAmount2 = BigInt.from(amount) * BigInt.from(10).pow(18);
+    if (balance == null || balance < bigAmount2) {
+      return showDialog<void>(
+        context: context,
+        builder: (BuildContext context) {
+          return AlertDialog(
+            title: Text('Insufficient Balance'),
+            content: SingleChildScrollView(
+              child: ListBody(
+                children: <Widget>[
+                  Text(
+                    'You do not have enough balance to make this transaction.',
+                  ),
+                ],
+              ),
+            ),
+            actions: <Widget>[
+              TextButton(
+                child: Text('OK'),
+                onPressed: () {
+                  Navigator.of(context).pop();
+                },
+              ),
+            ],
+          );
+        },
+      );
+    } else {
+      return showDialog<void>(
+        context: context,
+        builder: (BuildContext context) {
+          return AlertDialog(
+            title: Text('Confirm Share Tokens'),
+            content: SingleChildScrollView(
+              child: ListBody(
+                children: <Widget>[
+                  Text(
+                    'Are you sure you want to share $amount tokens to $address?',
+                  ),
+                ],
+              ),
+            ),
+            actions: <Widget>[
+              TextButton(
+                child: Text('Cancel'),
+                onPressed: () {
+                  Navigator.of(context).pop();
+                },
+              ),
+              TextButton(
+                child: Text('Confirm'),
+                onPressed: () async {
+                  Navigator.of(context).pop();
+                  await _sendTokens(address, amount);
+                },
+              ),
+            ],
+          );
+        },
+      );
+    }
+  }
+
+  Future<void> _sendTokens(String address, int amount) async {
+    var bigAmount = BigInt.from(amount) * BigInt.from(10).pow(18);
+    var response =
+        await submit("transfer", [EthereumAddress.fromHex(address), bigAmount]);
+    print(response);
+    _showTransactionDialog(response);
+  }
+
+// END OF SHARING TOKEN CODE
+
   @override
   Widget build(BuildContext context) {
     final user = FirebaseAuth.instance.currentUser;
@@ -239,12 +370,33 @@ class _MyHomePageState extends State<MyHomePage> {
             ),
             Container(
               margin: const EdgeInsets.all(20),
-              child: Text(
-                u_name,
-                style: const TextStyle(
-                    fontSize: 20,
-                    color: Colors.blueAccent,
-                    fontWeight: FontWeight.bold),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Text(
+                    u_name,
+                    style: const TextStyle(
+                      fontSize: 20,
+                      color: Colors.blueAccent,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                  TextButton(
+                    onPressed: () {
+                      final provider = Provider.of<GoogleSignInProvider>(
+                          context,
+                          listen: false);
+                      provider.googleLogout();
+                    },
+                    child: Text(
+                      "Logout",
+                      style: TextStyle(
+                        color: Colors.red,
+                        fontSize: 10,
+                      ),
+                    ),
+                  ),
+                ],
               ),
             ),
             Container(
@@ -283,10 +435,23 @@ class _MyHomePageState extends State<MyHomePage> {
                 onPressed: () async {
                   await _confirmPayment();
                 },
-                child: const Text("Send Money"),
+                child: const Text("Book Ticket"),
                 style: ButtonStyle(
                   backgroundColor:
                       MaterialStateProperty.all<Color>(Colors.green),
+                ),
+              ),
+            ),
+            Container(
+              margin: const EdgeInsets.all(20),
+              child: ElevatedButton(
+                onPressed: () async {
+                  await _shareTokensDialog();
+                },
+                child: const Text("Share Tokens"),
+                style: ButtonStyle(
+                  backgroundColor:
+                      MaterialStateProperty.all<Color>(Colors.blue),
                 ),
               ),
             ),
