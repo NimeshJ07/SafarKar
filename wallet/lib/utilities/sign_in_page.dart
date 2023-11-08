@@ -20,4 +20,10 @@ class GoogleSignInProvider extends ChangeNotifier {
     await FirebaseAuth.instance.signInWithCredential(credential);
     notifyListeners();
   }
+  Future googleLogout() async {
+    await googleSignIn.signOut();
+    await FirebaseAuth.instance.signOut();
+    _user = null;
+    notifyListeners();
+  }
 }
